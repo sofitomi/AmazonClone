@@ -38,7 +38,7 @@ auth.onAuthStateChanged((authUser)=>{
 }, [])
 
   return (
-    <Router>
+    <Router basename={process.env.PUBLIC_URL}>
       <div className="App">
         <Routes>
           <Route path="/login" element={<Login />} />
@@ -46,7 +46,8 @@ auth.onAuthStateChanged((authUser)=>{
             path="/orders"
             element={
               <>
-                <Header /><Orders />
+                <Header />
+                <Orders />
               </>
             }
           />
