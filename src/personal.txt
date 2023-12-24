@@ -1,0 +1,26 @@
+
+// ***(apikeynew firebase emulator atart on the terminal)****
+
+// (http://127.0.0.1:5001/fir-77edf/us-central1/api).
+// ┌───────────┬────────────────┬─────────────────────────────────┐
+// │ Emulator  │ Host:Port      │ View in Emulator UI             │
+// ├───────────┼────────────────┼─────────────────────────────────┤
+// │ Functions │ 127.0.0.1:5001 │ http://127.0.0.1:4000/functions
+
+{
+  "functions": [
+    {
+      "source": "functions",
+      "codebase": "default",
+      "ignore": [
+        "node_modules",
+        ".git",
+        "firebase-debug.log",
+        "firebase-debug.*.log"
+      ],
+      "predeploy": [
+        "npm --prefix \"$RESOURCE_DIR\" run lint"
+      ]
+    }
+  ]
+}
